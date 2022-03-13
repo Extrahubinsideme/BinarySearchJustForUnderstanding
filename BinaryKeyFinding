@@ -1,0 +1,35 @@
+Case 1: it return greater than or equal key value index.
+
+public int binary(int[][] rides, int idx, int n){
+        int s = idx + 1, e = n - 1;
+        int ans = n;
+        int endTime = rides[idx][1];
+        while(s <= e){
+            int mid = (s + e) >> 1;
+            
+            if(rides[mid][0] >= endTime){
+                ans = mid;
+                e = mid -1;
+            }else{
+                s = mid + 1;
+            }
+        }
+        return ans;
+    }
+    Case 2: it reture greater than key value index.
+    public int binary(int[][] rides, int idx, int n){
+        int s = idx + 1, e = n - 1;
+        int ans = n;
+        int endTime = rides[idx][1];
+        while(s <= e){
+            int mid = (s + e) >> 1;
+            
+            if(rides[mid][0] >= endTime){
+                ans = mid;
+                e = mid -1;
+            }else{
+                s = mid + 1;
+            }
+        }
+        return ans;
+    }
